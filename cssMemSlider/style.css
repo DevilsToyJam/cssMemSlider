@@ -1,0 +1,52 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #b2b2b2;
+}
+
+.slider {
+    max-width: 1100px;
+    height: 600px;
+    overflow: hidden;
+    border: 2px solid #fff;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.navigation {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 100%;
+    background-color: rgb(221, 221, 221, 0.7);
+    transition: all 0.3s ease;
+}
+
+.dot:hover {
+    background-color: rgb(221, 221, 221, 1);
+    transform: scale(1.1);
+}
+
+input[name="sl"] {
+    position: absolute;
+    visibility: hidden;
+}
+
