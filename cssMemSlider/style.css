@@ -1,4 +1,4 @@
-* { 
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,25 +10,42 @@ body {
 
 .navigation {
     position: absolute;
-    bottom: 16px;
+    bottom: 1rem;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
 }
 
-.dot {
-    height: 15px;
-    width: 15px;
-    margin: 5px;
+.navigation .dot {
+    height: 1rem;
+    width: 1rem;
+    margin: 0.5rem;
     cursor: pointer;
     border-radius: 100%;
     background-color: rgb(221, 221, 221, 0.7);
     transition: all 0.3s ease;
 }
 
-.dot:hover {
+.navigation .dot:hover {
     background-color: rgb(221, 221, 221, 1);
     transform: scale(1.1);
+}
+
+.navigation .dot:active {
+    background-color: rgb(221, 221, 221, 1);
+    transform: scale(1.6);
+}
+
+#sl1:checked ~ .navigation .dot:nth-child(1),
+#sl2:checked ~ .navigation .dot:nth-child(2),
+#sl3:checked ~ .navigation .dot:nth-child(3),
+#sl4:checked ~ .navigation .dot:nth-child(4) {
+    background-color: rgb(255, 254, 254);
+    transform: scale(1.2);
+}
+
+#sl1:checked ~ .navigation .dot:hover {
+    transform: scale(1.6);
 }
 
 input[name="sl"] {
@@ -46,11 +63,12 @@ input[name="sl"] {
 }
 
 .slider {
+    margin: 0 2.25rem;
     position: relative;
-    max-width: 900px;
+    max-width: 34.5rem;
     height: 70vh;
     overflow: hidden;
-    border: 2px solid #fff;
+    border: 0.125rem solid #fff;
 }
 
 .slides {
@@ -58,7 +76,7 @@ input[name="sl"] {
     height: 100%;
     display: flex;
 
-} 
+}
 
 .slide {
     width: 25%;
@@ -70,18 +88,19 @@ input[name="sl"] {
     height: auto;
 }
 
-#sl1:checked ~ .s1 {
+#sl1:checked ~.slides .s1 {
     margin-left: 0;
 }
 
-#sl2:checked ~ .s2 {
+#sl2:checked ~.slides .s1 {
     margin-left: -25%;
 }
 
-#sl3:checked ~ .s3 {
+#sl3:checked ~.slides .s1 {
     margin-left: -50%;
 }
 
-#sl4:checked ~ .s4 {
+#sl4:checked ~.slides .s1 {
     margin-left: -75%;
 }
+
